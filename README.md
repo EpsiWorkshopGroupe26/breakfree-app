@@ -74,3 +74,38 @@ Pour exécuter les tests unitaires et d'intégration, utilisez la commande suiva
 
 ```bash
 flutter test
+```
+
+## Déploiement
+
+BreakFree est destiné à être publié sur les plateformes **iOS** et **Android**. Voici les étapes de base pour préparer le déploiement.
+
+### Android
+1. **Génération de l'APK ou de l'AAB pour Android** :
+   - Pour générer un fichier APK en mode release, exécute la commande suivante :
+     ```bash
+     flutter build apk --release
+     ```
+   - Pour générer un fichier AAB (Android App Bundle), utilise la commande suivante :
+     ```bash
+     flutter build appbundle --release
+     ```
+
+2. **Publication sur le Google Play Store** :
+   - Une fois que tu as généré l'APK ou l'AAB, tu peux suivre les instructions de [Google Play Console](https://play.google.com/console) pour publier l'application sur le Play Store.
+
+### iOS
+1. **Génération d'une archive pour iOS** :
+   - Pour créer une version release de l'application iOS, exécute la commande suivante :
+     ```bash
+     flutter build ios --release
+     ```
+
+2. **Utilisation de Xcode pour la publication** :
+   - Ouvre le projet dans **Xcode**.
+   - Sélectionne le bon profil de signature et configure les paramètres nécessaires.
+   - Utilise **App Store Connect** pour soumettre l'application à l'App Store.
+
+### Remarques supplémentaires
+- Assure-toi que toutes les configurations spécifiques à la plateforme (comme les icônes, les autorisations, et les fichiers de configuration) sont bien mises en place avant le déploiement.
+- Pour une expérience utilisateur optimale, il est conseillé de tester minutieusement l'application sur des appareils physiques avant de la publier.

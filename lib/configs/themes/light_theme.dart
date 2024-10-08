@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
-  fontFamily: GoogleFonts.onest().fontFamily,
-  textTheme: GoogleFonts.onestTextTheme().apply(
+  fontFamily: GoogleFonts.baloo2().fontFamily,
+  textTheme: GoogleFonts.baloo2TextTheme().apply(
     bodyColor: const Color(0xFF211817),
     displayColor: const Color(0xFF211817),
   ),
@@ -51,7 +51,7 @@ final ThemeData lightTheme = ThemeData(
     surfaceBright: Color(0xFFFFFFFF),
     surfaceContainerLowest: Color(0xFFE0E0E0),
     surfaceContainerLow: Color(0xFFCCCCCC),
-    surfaceContainer: Color(0xFFB3B3B3),
+    surfaceContainer: Color(0xFFEDDACA),
     surfaceContainerHigh: Color(0xFF999999),
     surfaceContainerHighest: Color(0xFF808080),
     onSurfaceVariant: Color(0xFF211817),

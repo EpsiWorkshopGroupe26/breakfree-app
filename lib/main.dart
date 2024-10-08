@@ -1,6 +1,7 @@
 import 'package:breakfree/configs/routes/routes.dart';
 import 'package:breakfree/configs/themes/dark_theme.dart';
 import 'package:breakfree/configs/themes/light_theme.dart';
+import 'package:breakfree/pages/auth/setup/setup_view.dart';
 import 'package:breakfree/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -52,7 +53,7 @@ class _MyAppState extends State<MyApp> {
         initialRoute: '/',
         onGenerateRoute: Routes.router.generator,
         debugShowCheckedModeBanner: false,
-        home: const OnboardingView(),
+        home: const SetupView(),
       ),
     );
   }
