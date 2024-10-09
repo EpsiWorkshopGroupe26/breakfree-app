@@ -10,8 +10,7 @@ Dans le cadre de notre mission pour vous accompagner dans la lutte contre les ad
 - Situation Professionnelle : Nous l’utilisons pour comprendre votre environnement et ajuster les recommandations en fonction de votre style de vie.
 
 #### Données sur l’Addiction :
-- Type d'addiction, Fréquence, Durée, Conséquences, Tentatives de sevrage : Ces données sont essentielles pour dresser un profil précis de votre situation d'addiction. Elles nous permettent de :
-Vous fournir des recommandations personnalisées sur les méthodes de réduction ou d'arrêt de votre addiction.
+- Type d'addiction, Fréquence, Durée, Conséquences, Tentatives de sevrage : Ces données sont essentielles pour dresser un profil précis de votre situation d'addiction. Elles nous permettent de vous fournir des recommandations personnalisées sur les méthodes de réduction ou d'arrêt de votre ou vos addiction (s).
 
 #### Données sur votre bien-être mental :
 - État émotionnel, Symptômes de dépression, Niveau de stress : Ces informations sont traitées pour mieux comprendre votre état psychologique actuel, essentiel pour adapter nos conseils et éventuellement vous rediriger vers des professionnels de santé si nécessaire.
@@ -21,7 +20,6 @@ Vous fournir des recommandations personnalisées sur les méthodes de réduction
 
 #### Données sur vos Objectifs et votre progression :
 - Objectifs liés à votre addiction, Réalisation des objectifs : Nous utilisons ces informations pour suivre votre progression et vous encourager, tout en adaptant les conseils et ressources proposés selon vos réalisations.
-
 
 ## 2. Contexte d'Utilisation des Données
 Les données que nous collectons sont utilisées dans différents contextes :
