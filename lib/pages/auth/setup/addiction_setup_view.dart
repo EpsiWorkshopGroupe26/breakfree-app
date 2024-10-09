@@ -284,6 +284,16 @@ Map<String, dynamic> addictionQuestions = {
         "réseaux sociaux",
         "Autre"
       ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de fumer",
+        "Réduire la consommation",
+        "Changer de marque",
+        "Changer de type de tabac",
+        "Changer de type de cigarette",
+      ]
     }
   ],
   "Alcohol": [
@@ -318,6 +328,16 @@ Map<String, dynamic> addictionQuestions = {
         "remplacer par des boissons non alcoolisées",
         "ne plus boire seul",
       ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de boire",
+        "Réduire la consommation",
+        "Changer de type de boisson",
+        "Changer de lieu de consommation",
+        "Changer de moment de consommation",
+      ]
     }
   ],
   "Drugs": [
@@ -351,6 +371,16 @@ Map<String, dynamic> addictionQuestions = {
         "réduire les fréquences",
         "remplacer par des activités saines",
         "ne plus consommer seul",
+      ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de consommer",
+        "Réduire la consommation",
+        "Changer de type de drogue",
+        "Changer de lieu de consommation",
+        "Changer de moment de consommation",
       ]
     }
   ],
@@ -387,6 +417,16 @@ Map<String, dynamic> addictionQuestions = {
         "réduire les fréquences",
         "remplacer par des activités saines",
         "ne plus jouer seul",
+      ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de jouer",
+        "Réduire la consommation",
+        "Changer de type de jeu",
+        "Changer de lieu de jeu",
+        "Changer de moment de jeu",
       ]
     }
   ],
@@ -427,6 +467,16 @@ Map<String, dynamic> addictionQuestions = {
         "trouver des jeux moins addictifs",
         "sortir plus souvent",
         "arreter apres une certaine heure",
+      ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de jouer",
+        "Réduire la consommation",
+        "Changer de type de jeu",
+        "Changer de lieu de jeu",
+        "Changer de moment de jeu",
       ]
     }
   ],
@@ -472,6 +522,16 @@ Map<String, dynamic> addictionQuestions = {
         "sortir plus souvent",
         "arreter apres une certaine heure",
       ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter d'utiliser les réseaux sociaux",
+        "Réduire la consommation",
+        "Changer de type de réseau social",
+        "Changer de lieu de connexion",
+        "Changer de moment de connexion",
+      ]
     }
   ],
   "Tv": [
@@ -509,6 +569,16 @@ Map<String, dynamic> addictionQuestions = {
         "sortir plus souvent",
         "arreter apres une certaine heure",
       ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de regarder la télévision",
+        "Réduire la consommation",
+        "Changer de type de programme",
+        "Changer de lieu de visionnage",
+        "Changer de moment de visionnage",
+      ]
     }
   ],
   "Shopping": [
@@ -543,6 +613,16 @@ Map<String, dynamic> addictionQuestions = {
         "remplacer par des activités saines",
         "ne plus acheter seul",
       ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de faire du shopping",
+        "Réduire la consommation",
+        "Changer de type de produit",
+        "Changer de lieu de shopping",
+        "Changer de moment de shopping",
+      ]
     }
   ],
   "Food": [
@@ -575,6 +655,16 @@ Map<String, dynamic> addictionQuestions = {
         "réduire les fréquences",
         "remplacer par des aliments sains",
         "ne plus manger seul",
+      ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de manger compulsivement",
+        "Réduire la consommation",
+        "Changer de type d'aliment",
+        "Changer de lieu de consommation",
+        "Changer de moment de consommation",
       ]
     }
   ],
@@ -610,6 +700,16 @@ Map<String, dynamic> addictionQuestions = {
         "ne plus avoir de relations sexuelles seul",
         "ne plus regarder de contenu pornographique",
       ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter d'avoir des relations sexuelles compulsives",
+        "Réduire la consommation",
+        "Changer de type de relation",
+        "Changer de lieu de relation",
+        "Changer de moment de relation",
+      ]
     }
   ],
   "Work": [
@@ -643,6 +743,16 @@ Map<String, dynamic> addictionQuestions = {
         "remplacer par des activités saines",
         "ne plus travailler seul",
         "ne plus travailler le soir",
+      ]
+    },
+    {
+      "questions": ["Quels sont tes objectifs?"],
+      "answers": [
+        "Arrêter de travailler compulsivement",
+        "Réduire la consommation",
+        "Changer de type de travail",
+        "Changer de lieu de travail",
+        "Changer de moment de travail",
       ]
     }
   ],
