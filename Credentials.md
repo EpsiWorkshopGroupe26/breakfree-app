@@ -3,15 +3,14 @@ Dans le cadre de notre mission pour vous accompagner dans la lutte contre les ad
 
 #### Données d'Identification :
 - Adresse e-mail : Utilisée pour la création de votre compte, la gestion de votre accès sécurisé, et pour les communications importantes liées à votre utilisation de la plateforme.
-- Mot de passe : Protége votre compte, chiffré et non stocké en texte clair.
+- Mot de passe : Protége votre compte, hashé et non stocké en texte clair.
 
 #### Données Personnelles :
 - Prénom, Nom, Âge, Genre : Ces informations nous permettent de personnaliser l'expérience sur la plateforme et d'adapter les conseils et suivis à votre situation.
 - Situation Professionnelle : Nous l’utilisons pour comprendre votre environnement et ajuster les recommandations en fonction de votre style de vie.
 
 #### Données sur l’Addiction :
-- Type d'addiction, Fréquence, Durée, Conséquences, Tentatives de sevrage : Ces données sont essentielles pour dresser un profil précis de votre situation d'addiction. Elles nous permettent de :
-Vous fournir des recommandations personnalisées sur les méthodes de réduction ou d'arrêt de votre addiction.
+- Type d'addiction, Fréquence, Durée, Conséquences, Tentatives de sevrage : Ces données sont essentielles pour dresser un profil précis de votre situation d'addiction. Elles nous permettent de vous fournir des recommandations personnalisées sur les méthodes de réduction ou d'arrêt de votre ou vos addiction (s).
 
 #### Données sur votre bien-être mental :
 - État émotionnel, Symptômes de dépression, Niveau de stress : Ces informations sont traitées pour mieux comprendre votre état psychologique actuel, essentiel pour adapter nos conseils et éventuellement vous rediriger vers des professionnels de santé si nécessaire.
@@ -21,7 +20,6 @@ Vous fournir des recommandations personnalisées sur les méthodes de réduction
 
 #### Données sur vos Objectifs et votre progression :
 - Objectifs liés à votre addiction, Réalisation des objectifs : Nous utilisons ces informations pour suivre votre progression et vous encourager, tout en adaptant les conseils et ressources proposés selon vos réalisations.
-
 
 ## 2. Contexte d'Utilisation des Données
 Les données que nous collectons sont utilisées dans différents contextes :
@@ -67,4 +65,4 @@ Vous avez un contrôle total sur vos données :
 - Suppression : Vous pouvez demander la suppression complète de votre compte et de toutes les données associées, en conformité avec les règles du RGPD (Règlement Général sur la Protection des Données).
 
 ##6. Conclusion
-Chez BreakFree, nous prenons la sécurité et la confidentialité de vos informations très au sérieux. Vos données sont traitées avec soin, et nous les utilisons uniquement pour vous accompagner dans votre parcours vers une vie plus équilibrée, loin des addictions.
+Chez BreakFree, nous prenons la sécurité et la confidentialité de vos informations très au sérieux. Vos données sont toutes chiffrées et traitées avec soin, et nous les utilisons uniquement pour vous accompagner dans votre parcours vers une vie plus équilibrée, loin des addictions.
