@@ -3,7 +3,7 @@ Dans le cadre de notre mission pour vous accompagner dans la lutte contre les ad
 
 #### Données d'Identification :
 - Adresse e-mail : Utilisée pour la création de votre compte, la gestion de votre accès sécurisé, et pour les communications importantes liées à votre utilisation de la plateforme.
-- Mot de passe : Protége votre compte, chiffré et non stocké en texte clair.
+- Mot de passe : Protége votre compte, hashé et non stocké en texte clair.
 
 #### Données Personnelles :
 - Prénom, Nom, Âge, Genre : Ces informations nous permettent de personnaliser l'expérience sur la plateforme et d'adapter les conseils et suivis à votre situation.
@@ -67,4 +67,4 @@ Vous avez un contrôle total sur vos données :
 - Suppression : Vous pouvez demander la suppression complète de votre compte et de toutes les données associées, en conformité avec les règles du RGPD (Règlement Général sur la Protection des Données).
 
 ##6. Conclusion
-Chez BreakFree, nous prenons la sécurité et la confidentialité de vos informations très au sérieux. Vos données sont traitées avec soin, et nous les utilisons uniquement pour vous accompagner dans votre parcours vers une vie plus équilibrée, loin des addictions.
+Chez BreakFree, nous prenons la sécurité et la confidentialité de vos informations très au sérieux. Vos données sont toutes chiffrées et traitées avec soin, et nous les utilisons uniquement pour vous accompagner dans votre parcours vers une vie plus équilibrée, loin des addictions.
