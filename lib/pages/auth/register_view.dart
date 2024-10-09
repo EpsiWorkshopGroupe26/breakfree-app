@@ -1,6 +1,7 @@
 import 'package:breakfree/configs/themes/app_theme.dart';
 import 'package:breakfree/helpers/extensions/build_context_extension.dart';
 import 'package:breakfree/helpers/validators.dart';
+import 'package:breakfree/pages/Credentials.dart';
 import 'package:breakfree/widgets/appbar.dart';
 import 'package:breakfree/widgets/button.dart';
 import 'package:breakfree/widgets/spacing.dart';
@@ -125,36 +126,47 @@ class _RegisterViewState extends State<RegisterView> {
                   ),
                 ),
                 const Spacing.large(),
-                RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                    text: 'En vous inscrivant, vous acceptez les ',
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: context.colorScheme.onSurface.withOpacity(0.5),
+                InkWell(
+                  onTap: () => context.navigator.push(
+                    MaterialPageRoute(
+                      builder: (context) => const PrivacyPolicyPage(),
+                    ),
+                  ),
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      text: 'En vous inscrivant, vous acceptez les ',
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                            color:
+                                context.colorScheme.onSurface.withOpacity(0.5),
+                          ),
+                      children: [
+                        TextSpan(
+                          text: 'conditions générales d\'utilisation',
+                          style:
+                              Theme.of(context).textTheme.bodyMedium!.copyWith(
+                                    color: context.colorScheme.onSurface
+                                        .withOpacity(0.8),
+                                  ),
                         ),
-                    children: [
-                      TextSpan(
-                        text: 'conditions générales d\'utilisation',
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: context.colorScheme.onSurface
-                                  .withOpacity(0.8),
-                            ),
-                      ),
-                      TextSpan(
-                        text: ' et la ',
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: context.colorScheme.onSurface
-                                  .withOpacity(0.5),
-                            ),
-                      ),
-                      TextSpan(
-                        text: 'politique de confidentialité',
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: context.colorScheme.onSurface
-                                  .withOpacity(0.8),
-                            ),
-                      ),
-                    ],
+                        TextSpan(
+                          text: ' et la ',
+                          style:
+                              Theme.of(context).textTheme.bodyMedium!.copyWith(
+                                    color: context.colorScheme.onSurface
+                                        .withOpacity(0.5),
+                                  ),
+                        ),
+                        TextSpan(
+                          text: 'politique de confidentialité',
+                          style:
+                              Theme.of(context).textTheme.bodyMedium!.copyWith(
+                                    color: context.colorScheme.onSurface
+                                        .withOpacity(0.8),
+                                  ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 const Spacing.large(),

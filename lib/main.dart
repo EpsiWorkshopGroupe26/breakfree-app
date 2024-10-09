@@ -3,6 +3,7 @@ import 'package:breakfree/configs/themes/dark_theme.dart';
 import 'package:breakfree/configs/themes/light_theme.dart';
 import 'package:breakfree/pages/auth/setup/setup_view.dart';
 import 'package:breakfree/pages/onboarding.dart';
+import 'package:breakfree/pages/tabs/tab_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
@@ -53,7 +54,7 @@ class _MyAppState extends State<MyApp> {
         initialRoute: '/',
         onGenerateRoute: Routes.router.generator,
         debugShowCheckedModeBanner: false,
-        home: const SetupView(),
+        home: const TabScreen(),
       ),
     );
   }
