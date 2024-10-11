@@ -10,6 +10,7 @@ import 'package:breakfree/pages/auth/setup/mental_health_setup_view.dart';
 import 'package:breakfree/pages/auth/setup/name_setup_view.dart';
 import 'package:breakfree/pages/auth/setup/professional_status_setup_view.dart';
 import 'package:breakfree/pages/auth/setup/stress_setup_view.dart';
+import 'package:breakfree/pages/tabs/tab_screen.dart';
 import 'package:breakfree/utils/enums/emotional_status_enum.dart';
 import 'package:breakfree/utils/enums/gender_enum.dart';
 import 'package:breakfree/utils/enums/professional_status_enum.dart';
@@ -278,6 +279,12 @@ class _SetupViewState extends State<SetupView> {
 
                     await GeneralInformationService()
                         .updateUserInfo(userId, generalInformation);
+
+                    context.navigator.push(
+                      MaterialPageRoute(
+                        builder: (context) => const TabScreen(),
+                      ),
+                    );
                 }
               },
             ),
