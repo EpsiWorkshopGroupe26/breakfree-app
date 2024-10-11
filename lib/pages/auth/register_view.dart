@@ -1,7 +1,11 @@
 import 'package:breakfree/configs/themes/app_theme.dart';
 import 'package:breakfree/helpers/extensions/build_context_extension.dart';
 import 'package:breakfree/helpers/validators.dart';
+import 'package:breakfree/models/addiction_model.dart';
+import 'package:breakfree/models/user_model.dart';
 import 'package:breakfree/pages/Credentials.dart';
+import 'package:breakfree/pages/auth/setup/setup_view.dart';
+import 'package:breakfree/utils/services/auth_service.dart';
 import 'package:breakfree/widgets/appbar.dart';
 import 'package:breakfree/widgets/button.dart';
 import 'package:breakfree/widgets/spacing.dart';
@@ -173,7 +177,20 @@ class _RegisterViewState extends State<RegisterView> {
                 BreakfreeButton(
                   label: 'Suivant',
                   onPressed: () async {
-                    if (_formKey.currentState!.validate()) {}
+                    if (_formKey.currentState!.validate()) {
+                      final AuthService _authService = AuthService();
+                      await _authService.register(
+                        _emailController.text,
+                        _passwordController.text,
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SetupView(),
+                        ),
+                      );
+                    }
                   },
                 ),
               ],

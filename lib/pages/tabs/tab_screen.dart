@@ -1,5 +1,7 @@
 import 'package:breakfree/helpers/extensions/build_context_extension.dart';
 import 'package:breakfree/pages/navigation_bar.dart';
+import 'package:breakfree/pages/tabs/articles_view.dart';
+import 'package:breakfree/pages/tabs/forum_view.dart';
 import 'package:breakfree/pages/tabs/home.dart';
 import 'package:breakfree/pages/tabs/user_profil.dart';
 import 'package:flutter/material.dart';
@@ -37,9 +39,9 @@ class _CustomNavigationBarDemoState extends State<TabScreen> {
         controller: _pageController,
         children: [
           const HomePage(),
-          Container(),
-          Container(),
-          UserProfilView(),
+          ForumPage(),
+          ArticlesView(),
+          const UserProfilView(),
         ],
       ),
       bottomNavigationBar: BreakFreeNavigationBar(

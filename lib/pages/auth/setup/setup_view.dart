@@ -1,8 +1,7 @@
-import 'dart:io';
-
 import 'package:breakfree/helpers/extensions/build_context_extension.dart';
-import 'package:breakfree/models/addiction_model.dart';
-import 'package:breakfree/pages/auth/login_view.dart';
+import 'package:breakfree/models/addiction_model_form.dart';
+import 'package:breakfree/models/general_information.dart';
+import 'package:breakfree/models/user_model.dart';
 import 'package:breakfree/pages/auth/setup/addiction_setup_view.dart';
 import 'package:breakfree/pages/auth/setup/age_setup_view.dart';
 import 'package:breakfree/pages/auth/setup/depression_setup_view.dart';
@@ -14,9 +13,11 @@ import 'package:breakfree/pages/auth/setup/stress_setup_view.dart';
 import 'package:breakfree/utils/enums/emotional_status_enum.dart';
 import 'package:breakfree/utils/enums/gender_enum.dart';
 import 'package:breakfree/utils/enums/professional_status_enum.dart';
+import 'package:breakfree/utils/services/api_client.dart';
+import 'package:breakfree/utils/services/auth_service.dart';
+import 'package:breakfree/utils/services/general_information_service.dart';
 import 'package:breakfree/widgets/appbar.dart';
 import 'package:breakfree/widgets/button.dart';
-import 'package:breakfree/widgets/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_lucide/flutter_lucide.dart';
 
@@ -33,12 +34,12 @@ class _SetupViewState extends State<SetupView> {
   // USER
   final TextEditingController _firstnameController = TextEditingController();
   final TextEditingController _lastnameController = TextEditingController();
-  final TextEditingController _ageController = TextEditingController();
+  int _selectedAge = 0;
   Gender? _selectedGender;
   ProfessionalStatusEnum? _professionalStatus;
 
   // ADDICTION QUESTIONS
-  List<AddictionModel> _addictions = [];
+  List<AddictionModelForm> _addictions = [];
 
   // MENTAL WELLBEING QUESTIONS
   EmotionalStatusEnum? _emotionalStatus;
@@ -81,7 +82,7 @@ class _SetupViewState extends State<SetupView> {
     _pageController.dispose();
     _firstnameController.dispose();
     _lastnameController.dispose();
-    _ageController.dispose();
+
     super.dispose();
   }
 
@@ -95,7 +96,11 @@ class _SetupViewState extends State<SetupView> {
       ),
       AgeSetupView(
         ageFormKey: _ageFormKey,
-        ageController: _ageController,
+        onAgeChanged: (int age) {
+          setState(() {
+            _selectedAge = age;
+          });
+        },
       ),
       GenderSetupView(
         onSelectedGenderChanged: (Gender gender) {
@@ -113,7 +118,7 @@ class _SetupViewState extends State<SetupView> {
         },
       ),
       AddictionSetupView(
-        onAddictionAdded: (AddictionModel addiction) {
+        onAddictionAdded: (AddictionModelForm addiction) {
           setState(() {
             _addictions.add(addiction);
           });
@@ -151,10 +156,6 @@ class _SetupViewState extends State<SetupView> {
       // ConsultationProfessionnelleSetupView(
       //   consultationProfessionnelleFormKey: _consultationProfessionnelleFormKey,
       //   consultationProfessionnelle: _consultationProfessionnelle,
-      // ),
-      // ObjectifsSetupView(
-      //   objectifsFormKey: _objectifsFormKey,
-      //   objectifs: _objectifs,
       // ),
     ];
 
@@ -208,15 +209,6 @@ class _SetupViewState extends State<SetupView> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // // Progress Bar
-          // LinearProgressIndicator(
-          //   value: (currentView + 1) / userPages.length,
-          //   backgroundColor: context.colorScheme.surfaceContainer,
-          //   valueColor: AlwaysStoppedAnimation<Color>(
-          //     context.colorScheme.primary,
-          //   ),
-          // ),
-          // const Spacing.large(),
           Expanded(
             child: PageView(
               controller: _pageController,
@@ -271,8 +263,21 @@ class _SetupViewState extends State<SetupView> {
                     nextPage();
                     break;
                   case 7:
-                    nextPage();
-                    break;
+                    final int userId = await ApiClient().getUserId();
+
+                    GeneralInformation generalInformation = GeneralInformation(
+                      firstName: _firstnameController.text,
+                      name: _lastnameController.text,
+                      age: _selectedAge,
+                      userId: userId,
+                      genre: _selectedGender!.name,
+                      situation: _professionalStatus!.name,
+                      createdAt: DateTime.now(),
+                      updatedAt: DateTime.now(),
+                    );
+
+                    await GeneralInformationService()
+                        .updateUserInfo(userId, generalInformation);
                 }
               },
             ),

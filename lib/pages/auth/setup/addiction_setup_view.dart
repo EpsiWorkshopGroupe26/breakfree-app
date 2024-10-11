@@ -1,33 +1,27 @@
 import 'package:breakfree/helpers/extensions/build_context_extension.dart';
-import 'package:breakfree/models/addiction_model.dart';
+import 'package:breakfree/models/addiction_model_form.dart';
 import 'package:breakfree/utils/enums/addiction_enum.dart';
-import 'package:breakfree/utils/enums/professional_status_enum.dart';
 import 'package:breakfree/widgets/button.dart';
 import 'package:breakfree/widgets/spacing.dart';
 import 'package:group_button/group_button.dart';
 import 'package:flutter/material.dart';
 
-// Tabac : (1, 2, 3, 4, 5, 6, 7, 8, 9, 10 et +)/jour
-// Alcool : (7 fois/semaine ou +, entre 4 à 6 fois/semaine ou +, entre 2 et 3 fois/semaine ou +, 1 fois/semaine ou -)
-// Drogue : (7 fois/semaine ou + entre 4 à 6 fois/semaine ou +, entre 2 et 3 fois/semaine ou +, 1 fois/semaine ou -)
-// Jeux d’argent : (8h/semaine ou +, entre 5 à 7h/semaine,  entre 3 et 4h/semaine, moins de 3h/semaine)
-// Jeux vidéo : (8h/semaine ou +, entre 5 à 7h/semaine,  entre 3 et 4h/semaine, moins de 3h/semaine)
-// Reseaux sociaux : (12h ou +, entre 9h et 11h, entre 6h et 8h, moins de 6h)
-// Télévision : (8h/semaine ou +, entre 5 à 7h/semaine,  entre 3 et 4h/semaine, moins de 3h/semaine)
-// Shopping : (3 fois/semaine ou +, entre 1 et 2 fois/semaine, 1 fois/semaine ou -, 2 fois/mois ou -)
-// Nourriture : (Jamais, Rarement, Parfois, Souvent, Toujours)
-// Sexe : (Jamais, Rarement, Parfois, Souvent, Toujours)
-// Travail : (Jamais, Rarement, Parfois, Souvent, Toujours)
-
 List<Object> addictionList = [];
 
-class AddictionSetupView extends StatelessWidget {
-  final Function(AddictionModel) onAddictionAdded;
+class AddictionSetupView extends StatefulWidget {
+  final Function(AddictionModelForm) onAddictionAdded;
 
-  const AddictionSetupView({
+  AddictionSetupView({
     super.key,
     required this.onAddictionAdded,
   });
+
+  @override
+  State<AddictionSetupView> createState() => _AddictionSetupViewState();
+}
+
+class _AddictionSetupViewState extends State<AddictionSetupView> {
+  List<AddictionModelForm> addictions = [];
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +40,7 @@ class AddictionSetupView extends StatelessWidget {
               ),
               const Spacing.large(),
               GroupButton(
-                isRadio: true,
+                isRadio: false,
                 buttons: AddictionEnum.values.map((e) => e.name).toList(),
                 onSelected: (label, index, isSelected) {
                   showBottomSheet(
@@ -57,7 +51,10 @@ class AddictionSetupView extends StatelessWidget {
                     builder: (context) {
                       return AddictionForm(
                         addiction: AddictionEnum.values[index],
-                        onAddictionAdded: onAddictionAdded,
+                        onAddictionAdded: (addiction) {
+                          addictions.add(addiction);
+                          widget.onAddictionAdded(addiction);
+                        },
                       );
                     },
                   );
@@ -123,7 +120,7 @@ class AddictionSetupView extends StatelessWidget {
 
 class AddictionForm extends StatelessWidget {
   final AddictionEnum addiction;
-  final Function(AddictionModel) onAddictionAdded;
+  final Function(AddictionModelForm) onAddictionAdded;
 
   const AddictionForm({
     super.key,
@@ -218,7 +215,7 @@ class AddictionForm extends StatelessWidget {
               label: 'Valider',
               onPressed: () async {
                 await onAddictionAdded(
-                  AddictionModel(
+                  AddictionModelForm(
                     type: addiction.name,
                     frequency: frequencyController.text,
                     duration: durationController.text,

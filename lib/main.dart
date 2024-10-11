@@ -4,6 +4,7 @@ import 'package:breakfree/configs/themes/light_theme.dart';
 import 'package:breakfree/pages/auth/setup/setup_view.dart';
 import 'package:breakfree/pages/onboarding.dart';
 import 'package:breakfree/pages/tabs/tab_screen.dart';
+import 'package:breakfree/utils/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
@@ -54,6 +55,27 @@ class _MyAppState extends State<MyApp> {
         initialRoute: '/',
         onGenerateRoute: Routes.router.generator,
         debugShowCheckedModeBanner: false,
+        // home: FutureBuilder<AuthStatus>(
+        //   future: AuthService().isAuthenticated(),
+        //   builder: (context, snapshot) {
+        //     if (snapshot.connectionState == ConnectionState.waiting ||
+        //         !snapshot.hasData) {
+        //       return const Scaffold(
+        //         body: Center(
+        //           child: CircularProgressIndicator(),
+        //         ),
+        //       );
+        //     }
+
+        //     if (snapshot.data == AuthStatus.setup) {
+        //       return const TabScreen();
+        //     } else if (snapshot.data == AuthStatus.authenticated) {
+        //       return const SetupView();
+        //     } else {
+        //       return const OnboardingView();
+        //     }
+        //   },
+        // ),
         home: const TabScreen(),
       ),
     );

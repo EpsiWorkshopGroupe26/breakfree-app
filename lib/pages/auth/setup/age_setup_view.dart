@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 class AgeSetupView extends StatelessWidget {
   final GlobalKey<FormState> ageFormKey;
-  final TextEditingController ageController;
+  final Function(int) onAgeChanged;
 
   const AgeSetupView({
     super.key,
     required this.ageFormKey,
-    required this.ageController,
+    required this.onAgeChanged,
   });
 
   @override
@@ -45,8 +45,8 @@ class AgeSetupView extends StatelessWidget {
                             index: index + 1,
                           );
                         },
-                        onValueChanged: (SelectorWheelValue<int> value) {
-                          ageController.text = value.label;
+                        onValueChanged: (value) {
+                          onAgeChanged(value.value);
                         },
                       ),
                       const Spacing.medium(),

@@ -27,11 +27,11 @@ class Validators {
     if (value.isEmpty) {
       return 'Le mot de passe ne peut pas être vide';
     }
-    if (value.length < 6 && value.isNotEmpty) {
-      return 'Le mot de passe doit contenir au moins 6 caractères';
+    if (value.length < 12 && value.isNotEmpty) {
+      return 'Le mot de passe doit contenir au moins 12 caractères';
     }
     if (value.length > 20 && value.isNotEmpty) {
-      return 'Le mot de passe doit contenir moins de 20 caractères';
+      return 'Le mot de passe doit contenir moins de 32 caractères';
     }
     return null;
   }
